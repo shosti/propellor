@@ -1,0 +1,11 @@
+-- This is a cabal file to use to build your propellor configuration.
+
+Name: config
+Cabal-Version: >= 1.6
+Build-Type: Simple
+Version: 0
+
+Executable propellor-config
+  Main-Is: config.hs
+  GHC-Options: -Wall -threaded -O0
+  Build-Depends: propellor, base >= 3
