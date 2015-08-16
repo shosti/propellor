@@ -16,7 +16,7 @@ import qualified Propellor.Property.User as User
 import qualified Propellor.Property.Docker as Docker
 
 main :: IO ()
-main = defaultMain []
+main = defaultMain [ Host "localhost.localdomain" [] mempty ]
 
 -- The hosts propellor knows about.
 -- Edit this to configure propellor!
