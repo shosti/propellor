@@ -22,7 +22,7 @@ main = defaultMain hosts
 -- Edit this to configure propellor!
 hosts :: [Host]
 hosts =
-	[ host "bravos.emanuel.evans"
+	[ host "bravos.emanuel.industries"
 		& os (System (Debian (Stable "jessie")) "amd64")
 		& Apt.stdSourcesList
 		& Apt.unattendedUpgrades
