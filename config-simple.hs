@@ -28,12 +28,12 @@ hosts =
 		& Apt.unattendedUpgrades
 		& Apt.installed ["etckeeper"]
 		& Apt.installed ["ssh"]
-                & Ssh.noPasswords
-		-- & User.hasSomePassword (User "root")
-		-- & Network.ipv6to4
-		-- & File.dirExists "/var/www"
-		-- & Docker.docked webserverContainer
-		-- & Docker.garbageCollected `period` Daily
+		& Ssh.noPasswords
+		& User.hasSomePassword (User "root")
+		& Network.ipv6to4
+		& File.dirExists "/var/www"
+		& Docker.docked webserverContainer
+		& Docker.garbageCollected `period` Daily
 		& Cron.runPropellor (Cron.Times "30 * * * *")
 
 	-- add more hosts here...
