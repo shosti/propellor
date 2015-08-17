@@ -29,7 +29,7 @@ hosts =
 		& Apt.installed ["etckeeper"]
 		& Apt.installed ["ssh"]
 		& Ssh.noPasswords
-		& User.hasSomePassword (User "root")
+		-- & User.hasSomePassword (User "root")
 		& Network.ipv6to4
 		& File.dirExists "/var/www"
 		& Docker.docked webserverContainer
