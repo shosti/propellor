@@ -30,7 +30,7 @@ hosts =
 		& Apt.installed ["ssh"]
 		& Ssh.noPasswords
 		-- & User.hasSomePassword (User "root")
-		& Network.ipv6to4
+		-- & Network.ipv6to4
 		& File.dirExists "/var/www"
 		& Docker.docked webserverContainer
 		& Docker.garbageCollected `period` Daily
