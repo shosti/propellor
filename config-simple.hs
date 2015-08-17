@@ -7,7 +7,7 @@ import Propellor.Property.Scheduled
 import qualified Propellor.Property.File as File
 import qualified Propellor.Property.Apt as Apt
 import qualified Propellor.Property.Network as Network
---import qualified Propellor.Property.Ssh as Ssh
+import qualified Propellor.Property.Ssh as Ssh
 import qualified Propellor.Property.Cron as Cron
 --import qualified Propellor.Property.Sudo as Sudo
 import qualified Propellor.Property.User as User
@@ -28,6 +28,7 @@ hosts =
 		& Apt.unattendedUpgrades
 		& Apt.installed ["etckeeper"]
 		& Apt.installed ["ssh"]
+                & Ssh.noPasswords
 		-- & User.hasSomePassword (User "root")
 		-- & Network.ipv6to4
 		-- & File.dirExists "/var/www"
